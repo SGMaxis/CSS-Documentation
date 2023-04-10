@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Documentation</title>
+    <link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+  <nav id='navbar'>
+    <header>
+      <h1>CSS Documentation</h1>
+    </header>
+    <ul>
+      <li><a class='nav-link' href='#css_units'>CSS Units</a></li>
+      <li><a class='nav-link' href='#css_position_property'>CSS Position Property</a></l>
+      <li><a class='nav-link' href='#css_box_model'>CSS Box Model</a></li>
+      <li><a class='nav-link' href='#css_display_property'>CSS Display Property</a></li>
+      <li><a class='nav-link' href='#css_background'>CSS Background</a></li>
+  </ul>
+  </nav>
+  <main id='main-doc'>
+    <section class='main-section' id='css_units'>
+      <header>
+        <h2>CSS Units</h2>
+      </header>
+      <p>CSS units allow you to modify a website’s design, so it’s important to understand how they operate. There are three different types of CSS units</p>
+      <ul class='unit-list'>
+        <li>Absolute Units: <code>px, pt, PC, in, cm, mm</code></li>
+        <li>Relative Units: <code>em, rem, %, ex, ch, fr</code></li>
+        <li>Viewport Units: <code>VW, vh, vmin, vmax</code></li>
+      </ul>
+      <p><span class='bold'>%</span> - relative to parent element, or root element(when position set to fixed)</p>
+      <p><span class='bold'>em</span> - unit of measurement equal to element's font size</p>
+      <p><span class='bold'>rem</span> - unit of measurements equal to root's font size</p>
+      <p><span class='bold'>Fr</span> - fraction of a container's free space</p>
+      <p><span class='bold'>Viewport units</span> - start with "v" follow by what part of viewport the unit is relative to, including height, weight, minimum, and maximum.</p>
+    </section>
+    <section class='main-section'id='css_position_property'>
+      <header>
+        <h2>CSS Position Property</h2>
+      </header>
+      <p>The <code class='code-color'>position</code> property specifies the type of positioning method used for an element</p>
+      <ul>
+        <li><code>static</code></li>
+        <li><code>relative</code></li>
+        <li><code>fixed</code></li>
+        <li><code>absolute</code></li>
+        <li><code>sticky</code></li>
+      </ul>
+      <p>Elements are then positioned using the top, bottom, left, and right properties.  </p>
+      <p><span class='bold'>Static</span> - elements are not affected by the top, bottom, left, and right properties.</p>
+      <p><span class='bold'>Relative</span> - element is positioned relative to it's normal position.</p>
+      <p><span class='bold'>Fixed</span> - element is positioned relative to viewport(stays in the sameplace even if page is scrolled)</p>
+      <p><span class='bold'>Absolute</span> - element is positioned relative to the nearest positioned ancestor(if no ancestor id found it uses the document body, and moves along with page)</p>
+      <p><span class='bold'>Sticky</span> - element toggles between <code>relative</code> and <code>fixed</code>, depending on the scroll position.</p>
+    </section>
+    <section class='main-section' id='css_box_model'>
+      <header>
+        <h2>CSS Box Model</h2>
+        </header>
+      <p><span class='bold'>Border</span> - is a layer  of the CSS box model that sits between margin and padding. By default does not have any width( uses <code>border</code> property to set it).</p>
+      <p><span class='bold'>Margin</span> - distance away from border of element, every HTML element have four margins that you can toggle by using <code>marign</code> with a specific side of that element (<code>top, right, bottom, left</code>).<br><span class='tip'>Can be set to negative to overlap elements.</span></p>
+      <p><span class='bold'>Padding</span> - distance from content of element to it's border, every HTML element has four sides that you can toggle by using<code>padding</code> property with a specific side of that element (<code>top, right ,bottom, left</code>)</p>
+    </section>
+    <section class='main-section' id='css_display_property'>
+      <header>
+        <h2>CSS Display Property</h2>
+        </header>
+      <p>The <code>display</code> property specifies the display behavior of an element.</p>
+      <p>Some of mostly used display Values</p>
+      <ul>
+        <li><code>block</code></li>
+        <li><code>inline</code></li>
+        <li><code>inline-block</code></li>
+        <li><code>flex</code></li>
+        <li><code>grid</code></li>
+      </ul>
+      <p><span class='bold'>Block</span> - elements takes up entire width of their parent container or browser(in case parent is missing) unless a width is set and always start on a new line.</p>
+      <p><span class='bold'>Inline</span> - elements appear inline with other elements and without any line breaks.<br><span class='tip'>Only accept margin, padding and border but do not accept widthand height.</span></p>
+      <p><span class='bold'>Inline-block</span> - elements appear in line with other elements but accept all the box-model properties.</p>
+      <p><span class='bold'>Flex</span> - Displays an element as a block-level flex container</p>
+      <p><span class='bold'>Grid</span> - Displays an element as a block-level grid container</p>
+    </section>
+    <section class='main-section' id='css_background'>
+      <header>
+        <h2>CSS Background</h2>
+        </header>
+      <p>The <code>background</code> property is used to define the background effect on the element.</p>
+      <p>The are 5 bacground properties that affect the HTML elements:</p>
+      <ul>
+        <li><code>color</code></li>
+        <li><code>image</code></li>
+        <li><code>repeat</code></li>
+        <li><code>attachment</code></li>
+        <li><code>position</code></li>
+      </ul>
+      <p><span class='bold'>Color</span> - used to set the color of bacground</p>
+      <p><span class='bold'>Image</span> - used to set an image as a background element.<span class='tip'>By default image covers the entire element.</span> </p>
+      <p><span class='bold'>Repeat/</span> - Can be used after <code>image</code> to change how image is gonna be repeated.</p>
+      <p><span class='bold'>Attachment</span> - used to specify if th background image is fixed or scroll with the rest of the page.</p>
+      <p><span class='bold'>Position</span> - use to definethe initial position of the background image.<span class='tip'> By default the image is placed top-left of the webpage.(You can set the following posiitons <code>center, top, bottom, left, right</code>)</span></p>
+    </section>
+  </main>
+</body>
+</html>
